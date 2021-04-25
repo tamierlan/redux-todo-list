@@ -1,29 +1,30 @@
 import React from 'react';
 import './App.css';
+import Input from './components/Input';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from './actions';
-
-
 function App() {
-  const counter = useSelector(state => state.counter);
-  const isLogged = useSelector(state => state.isLogged);
-  const dispatch = useDispatch();
-
   return (
     <div className="App">
-      <h1>Counter: {counter}</h1>
-      <Button className='m-3' onClick={() => dispatch(decrement())}>-</Button>
-      <Button className='m-3' onClick={() => dispatch(increment(5))}>+</Button>
-      {isLogged ? <h3>please sign in!</h3>  : ''}
+      <Input />
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
